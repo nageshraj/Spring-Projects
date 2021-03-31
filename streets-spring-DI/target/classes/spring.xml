@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="sb" class="com.wolken.wolkenapp.bean.StreetBean">
+		<property name="streetId" value="3"></property>
+		<property name="streetName" value="SampigeRoad"></property>
+		<property name="streetArea" value="Malleshwaram"></property>
+		<property name="pincode" value="560003"></property>
+		<property name="potholeBean" ref="pb"></property>
+
+	</bean>
+
+	<bean id="pb" class="com.wolken.wolkenapp.bean.PotholeBean">
+		<property name="noOfPotholes" value="23"></property>
+		<property name="area" value="5*5"></property>
+	</bean>
+
+
+</beans>
